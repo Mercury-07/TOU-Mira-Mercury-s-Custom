@@ -29,3 +29,32 @@ Technical Problems: All round end location data needs to be kept and tracked, no
                     A lot of buttons: Download Times should all be induvidually adjustable, alongside orbit size,
                     drift "stamina" and regen, and cutoff penalty
 */                    
+
+//Ima be honest I just grabbed these from snitch idk what they do yet
+using AmongUs.GameOptions;
+using HarmonyLib;
+using Il2CppInterop.Runtime.Attributes;
+using MiraAPI.GameOptions;
+using MiraAPI.Modifiers;
+using MiraAPI.Patches.Stubs;
+using MiraAPI.Roles;
+using MiraAPI.Utilities;
+using Reactor.Utilities;
+using System.Text;
+using TownOfUs.Events;
+using TownOfUs.Interfaces;
+using TownOfUs.Modifiers.Crewmate;
+using TownOfUs.Modifiers.Game.Alliance;
+using TownOfUs.Options.Roles.Crewmate;
+using UnityEngine;
+
+namespace TownOfUs.Roles.Crewmate;
+
+public sealed class OrbitalRole(IntPtr cppPtr) : CrewmateRole(cppPtr), ICustomRole, IDoomable //iWikidiscoverable
+{
+    public DoomableType DoomHintType => DoomableType.Custom;
+    public string IdPart => "Orbital";
+    public ModdedRoleTeams Team => ModdedRoleTeams.Crewmate;
+    public RoleAlignment RoleAlignment => RoleAlignment.CrewmateInvestigative;
+
+}

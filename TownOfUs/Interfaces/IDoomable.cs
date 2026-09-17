@@ -15,5 +15,7 @@ public enum DoomableType
     Fearmonger,
     Protective,
     Trickster,
-    Relentless
+    Relentless,
+
+    Custom
 }
