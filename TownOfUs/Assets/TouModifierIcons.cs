@@ -111,4 +111,8 @@ public static class TouModifierIcons
 
     public static LoadableAsset<Sprite> FirstRoundShield { get; } =
         new LoadableBundleAsset<Sprite>("FirstRoundShield", TouAssets.MainBundle);
+
+    //custom starts HERE
+    public static LoadableAsset<Sprite> BlackoutCustom { get; } =
+        new LoadableBundleAsset<Sprite>("FirstRoundShield", TouAssets.MainBundle);
 }
